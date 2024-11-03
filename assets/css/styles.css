@@ -116,3 +116,53 @@ nav {
     margin-bottom: 20px;
 }
 
+/* Galería de Cards */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 200px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.card p {
+    margin: 5px 0;
+}
+
+.card button {
+    background: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card button:hover {
+    background: #555;
+}
+
+/* Pie de Página */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
