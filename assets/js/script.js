@@ -1,16 +1,22 @@
   //Funcion asincrona
   async function getDatos() {
-    //Llamar la API - Decirle que espere mientras llegan datos, despues tu sigues
-   const res  = await fetch(`https://restcountries.com/v3.1/subregion/South%20america`); 
     
-   //Extrae la info de la api, la transforma en un objeto y espera para mostrarla.
-   const data = await res.json();
-
-   dibujaCards(data);
-    
-   console.log(data);
+    try {
+       //Llamar la API - Decirle que espere mientras llegan datos, despues tu sigues
+        const res  = await fetch(`https://restcountries.com/v3.1/subregion/South%20america`);
+ 
+        //Extrae la info de la api, la transforma en un objeto y espera para mostrarla.
+        const data = await res.json();
+        dibujaCards(data);
+  
+        console.log(data);
+    } catch (error) {
+        alert("No pude conectarme a la API",error);
+    }
+   
   }
 
+  
   //Funcion para recibir,dibujar los paises y transformar en html visible
   function dibujaCards(paises) {
     const galeria = document.querySelector('.gallery');
