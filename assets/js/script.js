@@ -49,6 +49,10 @@ function hideLoading() {
     galeria.innerHTML = htmlPaises;
   }
 
+function viewMore(countryCode) {
+    window.location.href = `detail.html?code=${countryCode}`;
+}
+
   // Evento para cada enlace en la barra de navegación
   document.querySelectorAll('.navbar a').forEach(link => {
     link.addEventListener("click", (event) => {
