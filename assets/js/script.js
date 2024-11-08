@@ -1,3 +1,16 @@
+//Funcion para mostrar el estado de carga
+const loadingIndicator = document.getElementById('loading')
+
+function showLoading() {
+  loadingIndicator.classList.remove('hidden');
+}  
+  
+//Funcion para ocultar el estado de carga
+function hideLoading() {
+  loadingIndicator.classList.add('hidden');
+
+}
+
   //Funcion asincrona
   async function getDatos() {
     
@@ -12,6 +25,8 @@
         console.log(data);
     } catch (error) {
         alert("No pude conectarme a la API",error);
+    }finally {
+      hideLoading();
     }
    
   }
