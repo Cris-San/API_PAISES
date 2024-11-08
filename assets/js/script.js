@@ -12,19 +12,18 @@ function hideLoading() {
 }
 
   //Funcion asincrona
-  async function getDatos() {
-    
+  async function getDatos(subregion) {
+    showLoading();
     try {
        //Llamar la API - Decirle que espere mientras llegan datos, despues tu sigues
-        const res  = await fetch(`https://restcountries.com/v3.1/subregion/South%20america`);
+        const res  = await fetch(`https://restcountries.com/v3.1/subregion/${subregion}`);
  
         //Extrae la info de la api, la transforma en un objeto y espera para mostrarla.
         const data = await res.json();
         dibujaCards(data);
   
-        console.log(data);
     } catch (error) {
-        alert("No pude conectarme a la API",error);
+        alert("No pude conectarme a la API");
     }finally {
       hideLoading();
     }
@@ -49,4 +48,32 @@ function hideLoading() {
 
     galeria.innerHTML = htmlPaises;
   }
-  getDatos();
+
+  // Evento para cada enlace en la barra de navegación
+  document.querySelectorAll('.navbar a').forEach(link => {
+    link.addEventListener("click", (event) => {
+      const region = event.target.textContent;
+      
+      let subregion = '';
+
+      switch (region) {
+        case "América del Norte":
+          subregion = 'North America';
+          break;
+
+        case "América del Sur":
+          subregion = 'South America';
+          break;
+
+        case "América Central":
+          subregion = 'Central America';
+          break;
+      }
+
+      getDatos(subregion);
+    });
+  });
+
+  getDatos('South America');
+
+  
