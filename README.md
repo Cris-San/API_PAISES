@@ -35,5 +35,21 @@ Abre el archivo index.html en tu navegador.
 
 Navega por las subregiones y explora los datos de cada país.
 
+## 🔍 Estructura del Proyecto
+´´´plaintext
+/
+├── index.html          # Página principal con la lista de países
+├── detail.html         # Página con el detalle de cada país
+├── css/
+│   ├── styles.css      # Estilos de la aplicación
+├── js/
+│   ├── main.js         # Lógica principal de consumo de API y eventos
+│   ├── detail.js       # Obtiene los detalles de cada país
+└── assets/             # Recursos gráficos (banderas, escudos, etc.)
+
+´´´
+
+
+
 
 
