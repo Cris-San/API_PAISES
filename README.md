@@ -36,7 +36,7 @@ Abre el archivo index.html en tu navegador.
 Navega por las subregiones y explora los datos de cada país.
 
 ## 🔍 Estructura del Proyecto
-´´´plaintext
+```plaintext
 /
 ├── index.html          # Página principal con la lista de países
 ├── detail.html         # Página con el detalle de cada país
@@ -46,10 +46,58 @@ Navega por las subregiones y explora los datos de cada país.
 │   ├── main.js         # Lógica principal de consumo de API y eventos
 │   ├── detail.js       # Obtiene los detalles de cada país
 └── assets/             # Recursos gráficos (banderas, escudos, etc.)
+```
 
-´´´
+## 📚 Cómo funciona
+
+Al cargar la página, se muestran los países de Sudamérica por defecto.
+
+Puedes cambiar entre subregiones utilizando la barra de navegación.
+
+Cada tarjeta de país tiene un botón "Ver más" que te lleva a una vista detallada con:
+
+🏰 Nombre oficial del país
+
+🏡 Capital
+
+📅 Población
+
+🌐 Idioma(s)
+
+💰 Moneda oficial
+
+🏳️🇴 Bandera y escudo
+
+🗺️ Ubicación en el mapa
 
 
+## 🛠️ Mejoras futuras
+
+⚡ Implementar búsqueda por nombre de país.
+
+🎭 Diseño responsivo para móviles.
+
+🔄 Actualización en tiempo real de datos.
+
+
+## 👤 Autor
+
+Yuber Cristian Sánchez Ospina
+
+🌐 LinkedIn: https://www.linkedin.com/in/yubercristiansanchezospina/
+
+
+🐙 GitHub:  https://github.com/Cris-San
+
+
+✉️ Email: cris629.cso@gmail.com
+
+
+## ✨ Contribuciones
+
+Las contribuciones son bienvenidas. Si tienes ideas o mejoras, no dudes en hacer un fork y enviar un pull request. 💪
+
+🎉 ¡Gracias por visitar el proyecto! 🚀
 
 
 
